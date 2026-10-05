@@ -1,17 +1,15 @@
-## IPFS Game Project
+# entities-godot-ipfs
 
-Works only on Windows 10 and on Godot Engine 4.
+A small game-engine project that runs a bundled IPFS node as a child process and fetches content by its link.
 
-Straightforward changes to make work on Linux and Mac.
+## What it is for
 
-![Demo](https://user-images.githubusercontent.com/32321/116321716-6bfec800-a76f-11eb-99bb-357f3ce1f57e.mp4)
+It shows a game client carrying its own content-addressed network node: the client starts the node in its user data directory, reads a pasted content link through the node's command line, and stops the node when it quits. The node binaries for each desktop platform are bundled, and the script launches the Windows one.
 
-### Design
+## Build and run
 
-The Godot Client executes the IPFS node server as a process.
+Open `project.godot` in the engine's editor and run the main scene.
 
-The IPFS server is used via HTTP REST commands to:
+## Licence
 
-1. Create a node
-2. Download an IPFS link.
-3. Shutdown the node
+MIT; see `LICENSE`. The bundled node binaries are under their own MIT licence in `IPFS.LICENSE`.
